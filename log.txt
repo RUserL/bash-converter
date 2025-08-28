@@ -1,0 +1,11 @@
+=== Konvertierung gestartet: Thu Aug 28 09:16:45 AM CEST 2025 ===
+=== Konvertierung abgeschlossen: Thu Aug 28 09:16:45 AM CEST 2025 ===
+=== Konvertierung gestartet: Thu Aug 28 09:18:50 AM CEST 2025 ===
+[Text] input/beispiel.txt → output/beispiel.pdf
+=== Konvertierung abgeschlossen: Thu Aug 28 09:18:50 AM CEST 2025 ===
+=== Konvertierung gestartet: Thu Aug 28 09:21:34 AM CEST 2025 ===
+[Text] input/beispiel.txt → output/beispiel.pdf
+=== Konvertierung abgeschlossen: Thu Aug 28 09:21:34 AM CEST 2025 ===
+=== Konvertierung gestartet: Thu Aug 28 09:22:45 AM CEST 2025 ===
+[Text] input/beispiel.txt → output/beispiel.pdf
+=== Konvertierung abgeschlossen: Thu Aug 28 09:22:46 AM CEST 2025 ===
