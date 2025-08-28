@@ -9,3 +9,19 @@
 === Konvertierung gestartet: Thu Aug 28 09:22:45 AM CEST 2025 ===
 [Text] input/beispiel.txt → output/beispiel.pdf
 === Konvertierung abgeschlossen: Thu Aug 28 09:22:46 AM CEST 2025 ===
+=== Konvertierung gestartet: Thu Aug 28 10:17:03 AM CEST 2025 ===
+[Text] input/beispiel.txt → output/beispiel.pdf
+[Text] input/temp.txt → output/temp.pdf
+[Text] input/test.txt → output/test.pdf
+=== Konvertierung abgeschlossen: Thu Aug 28 10:17:05 AM CEST 2025 ===
+=== Konvertierung gestartet: Thu Aug 28 10:20:57 AM CEST 2025 ===
+[Text] input/beispiel.txt → output/beispiel.pdf
+[Text] input/temp.txt → output/temp.pdf
+[Text] input/test.txt → output/test.pdf
+=== Konvertierung abgeschlossen: Thu Aug 28 10:20:58 AM CEST 2025 ===
+=== Konvertierung gestartet: Thu Aug 28 10:35:13 AM CEST 2025 ===
+[Text] input/beispiel.txt → output/beispiel.pdf
+[Text] input/temp.txt → output/temp.pdf
+[Text] input/test1.txt → output/test1.pdf
+[Text] input/test.txt → output/test.pdf
+=== Konvertierung abgeschlossen: Thu Aug 28 10:35:15 AM CEST 2025 ===

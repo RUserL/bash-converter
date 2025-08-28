@@ -1,0 +1,30 @@
+while true; do
+    clear
+    echo "=== Bash-Konverter Menü ==="
+    echo "1) Manuelle Konvertierung starten"
+    echo "2) Ordnerüberwachung starten (watch.sh)"
+    echo "3) Beenden"
+    echo "4) PDF-Vergleich starten (compare.sh)"
+    echo "============================"
+    read -p "Auswahl: " option
+
+    case $option in
+        1)
+            echo "> Starte manuelle Konvertierung..."
+            ./convert.sh
+            read -p "Drücke Enter zum Zurückkehren..."
+            ;;
+        2)
+            echo "> Starte Überwachung..."
+            ./watch.sh
+            read -p "Drücke Enter zum Zurückkehren..."
+            ;;
+        3)
+            echo "> Beende..."
+            exit 0
+            ;;
+        4)
+            echo "> Vergleiche PDF-Dateien..."
+            ./compare.sh
+            read -p "Drücke Enter zum Zurückkehren..."
+            
