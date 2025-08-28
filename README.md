@@ -22,3 +22,14 @@ Ein Bash-Skript zur automatisierten Konvertierung von Bildern und Textdateien in
 - Installierte Tools:
   ```bash
   sudo apt install imagemagick pandoc
+
+## 📂 Projektstruktur
+
+```bash
+bash-converter/
+├── convert.sh          # Hauptskript zur Konvertierung
+├── input/              # Eingabedateien (z. B. .txt oder .jpg)
+│   └── .gitkeep        # Platzhalterdatei für Git
+├── output/             # Hier landen die generierten PDFs
+├── log.txt             # Protokolliert alle Konvertierungsvorgänge
+└── README.md           # Projektdokumentation
