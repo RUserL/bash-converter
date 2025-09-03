@@ -1,31 +1,31 @@
 #!/bin/bash
+INPUT_FILE="$1"
+TARGET_FORMAT="$2"
+BASENAME=$(basename "$INPUT_FILE")
+NAME="${BASENAME%.*}"
+DATE=$(date +%F)
+OUT_DIR="/media/sf_Compare/${NAME}_${DATE}"
 
-INPUT_DIR="input"
-OUTPUT_DIR="output"
-LOG_FILE="log.txt"
+mkdir -p "$OUT_DIR"
 
-mkdir -p "$INPUT_DIR" "$OUTPUT_DIR"
-
-echo "=== Konvertierung gestartet: $(date) ===" >> "$LOG_FILE"
-
-# Bilder konvertieren (.png, .jpg, .jpeg)
-for img in "$INPUT_DIR"/*.{png,jpg,jpeg}; do
-    [ -f "$img" ] || continue
-    filename=$(basename "$img")
-    name="${filename%.*}"
-    output="$OUTPUT_DIR/$name.pdf"
-    convert "$img" "$output"
-    echo "[Bild] $img → $output" >> "$LOG_FILE"
-done
-
-# Textdateien konvertieren (.txt, .md)
-for txt in "$INPUT_DIR"/*.{txt,md}; do
-    [ -f "$txt" ] || continue
-    filename=$(basename "$txt")
-    name="${filename%.*}"
-    output="$OUTPUT_DIR/$name.pdf"
-    pandoc "$txt" -o "$output"
-    echo "[Text] $txt → $output" >> "$LOG_FILE"
-done
-
-echo "=== Konvertierung abgeschlossen: $(date) ===" >> "$LOG_FILE"
+case "$TARGET_FORMAT" in
+    txt)
+        pdftotext "$INPUT_FILE" "$OUT_DIR/${NAME}.txt"
+        ;;
+    png)
+        pdftoppm "$INPUT_FILE" "$OUT_DIR/${NAME}" -png
+        ;;
+    jpg)
+        pdftoppm "$INPUT_FILE" "$OUT_DIR/${NAME}" -jpeg
+        ;;
+    md)
+        pdftotext "$INPUT_FILE" - | pandoc -f plain -t markdown -o "$OUT_DIR/${NAME}.md"
+        ;;
+    pdf)
+        cp "$INPUT_FILE" "$OUT_DIR/${NAME}.pdf"
+        ;;
+    *)
+        echo "❌ Ungültiges Zielformat"
+        exit 1
+        ;;
+esac

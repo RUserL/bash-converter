@@ -25,3 +25,27 @@
 [Text] input/test1.txt → output/test1.pdf
 [Text] input/test.txt → output/test.pdf
 === Konvertierung abgeschlossen: Thu Aug 28 10:35:15 AM CEST 2025 ===
+=== Konvertierung gestartet: Sun Aug 31 11:57:34 AM CEST 2025 ===
+[Text] input/beispiel.txt → output/beispiel.pdf
+[Text] input/temp.txt → output/temp.pdf
+[Text] input/test1.txt → output/test1.pdf
+[Text] input/test.txt → output/test.pdf
+=== Konvertierung abgeschlossen: Sun Aug 31 11:57:36 AM CEST 2025 ===
+=== Konvertierung gestartet: Sun Aug 31 11:57:44 AM CEST 2025 ===
+[Text] input/beispiel.txt → output/beispiel.pdf
+[Text] input/temp.txt → output/temp.pdf
+[Text] input/test1.txt → output/test1.pdf
+[Text] input/test.txt → output/test.pdf
+=== Konvertierung abgeschlossen: Sun Aug 31 11:57:46 AM CEST 2025 ===
+=== Konvertierung gestartet: Sun Aug 31 12:33:51 PM CEST 2025 ===
+[Text→PDF] input/beispiel.txt → output/beispiel.pdf
+[Text→PDF] input/temp.txt → output/temp.pdf
+[Text→PDF] input/test1.txt → output/test1.pdf
+[Text→PDF] input/test.txt → output/test.pdf
+=== Konvertierung abgeschlossen: Sun Aug 31 12:33:52 PM CEST 2025 ===
+=== Konvertierung gestartet: Sun Aug 31 12:37:29 PM CEST 2025 ===
+[PDF→TXT] /media/sf_Compare/compare1.pdf → sf_Compare/compare1_2025-08-31/compare1.txt
+=== Konvertierung abgeschlossen: Sun Aug 31 12:37:29 PM CEST 2025 ===
+=== Konvertierung gestartet: Sun Aug 31 12:39:55 PM CEST 2025 ===
+[PDF→JPG] /media/sf_Compare/compare1.pdf → sf_Compare/compare1_2025-08-31/compare1-*.jpg
+=== Konvertierung abgeschlossen: Sun Aug 31 12:39:57 PM CEST 2025 ===

@@ -1,0 +1,4 @@
+=== Konvertierung gestartet: Sun Aug 31 12:21:42 PM CEST 2025 ===
+✅ Datei konvertiert: /media/sf_Compare/compare1.pdf → sf_Compare/compare1_2025-08-31/compare1.png
+=== Konvertierung gestartet: Sun Aug 31 12:26:49 PM CEST 2025 ===
+✅ Datei konvertiert: /media/sf_Compare/compare1.pdf → sf_Compare/compare1_2025-08-31/compare1.png
