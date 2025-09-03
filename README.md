@@ -13,7 +13,7 @@ Ein umfangreiches Bash-Projekt zur **Konvertierung, Überwachung, Optimierung, V
 
 ##  Funktionen
 
-### 📄 1. Manuelle Konvertierung (`convert.sh`)
+###  1. Manuelle Konvertierung (`convert.sh`)
 - Wähle eine Eingabedatei (z. B. `.txt`, `.md`, `.jpg`, `.png`, `.pdf`)
 - Wähle ein **Zielformat**:
   - PDF, TXT, PNG, JPG, MD
@@ -25,7 +25,7 @@ Ein umfangreiches Bash-Projekt zur **Konvertierung, Überwachung, Optimierung, V
 
 ---
 
-### 📑 2. PDF-Vergleich (`compare.sh`)
+###  2. PDF-Vergleich (`compare.sh`)
 - Vergleicht zwei PDF-Dateien **byteweise**
 - Gibt übersichtliches Ergebnis im Terminal aus:
   - ✅ Gleich
@@ -33,7 +33,7 @@ Ein umfangreiches Bash-Projekt zur **Konvertierung, Überwachung, Optimierung, V
 
 ---
 
-### 🖼️ 3. Automatische Bildoptimierung (`watch.sh`)
+###  3. Automatische Bildoptimierung (`watch.sh`)
 - Überwacht den Ordner:
   ```bash
   /media/sf_Compare/Bildoptimierung
@@ -52,7 +52,7 @@ convert "$file" -resize 50%
 
 ---
 
-### 🛡️ 4. Virenscan (`virus_scan.sh`)
+###  4. Virenscan (`virus_scan.sh`)
 - Beobachtet `/media/sf_Compare` auf neue Dateien
 - Erkennt neue Dateien und führt `clamscan` aus
 - Erkennt "Virus" oder gibt Entwarnung
@@ -61,29 +61,31 @@ convert "$file" -resize 50%
 ---
 
 
-## 📁 Projektstruktur
+##  Projektstruktur
 
 ```bash
 bash-converter/
-├── convert.sh          # 🔄 Konvertiert Dateien in PDF, TXT, JPG, PNG, MD
-├── compare.sh          # 📄 Vergleicht zwei PDF-Dateien
-├── watch.sh            # 📷 Überwacht Ordner & optimiert neue Bilder
-├── virus_scan.sh       # 🛡️ Scannt neue Dateien auf Viren & versendet Mail
-├── menu.sh             # 🧭 Zentrales Terminal-Menü
-├── output/             # 💾 Hier landen die generierten Dateien
-├── logs/               # 🗂️ Protokollverzeichnis
-└── README.md           # 📘 Diese Dokumentation
+├── convert.sh            # Hauptskript zur Konvertierung
+├── input/                # Eingabedateien (.txt, .jpg etc.)
+│   └── .gitkeep
+├── output/               # Generierte Ausgabedateien
+├── log.txt               # Protokolliert die Konvertierung
+├── compare.sh            # PDF-Vergleichsskript
+├── watch.sh              # Automatische Bildoptimierung
+├── virus_scan.sh         # Automatischer Virenscan
+├── menu.sh               # Terminalmenü zur Bedienung
+└── README.md             # Diese Dokumentation
+```
 
 ---
 
-## ⚙️ Voraussetzungen
+##  Voraussetzungen
 
 - Linux-Umgebung mit Bash
 - Installierte Tools:
 
 ```bash
-sudo apt update
-sudo apt install imagemagick pandoc poppler-utils clamav msmtp inotify-tools
+sudo apt install imagemagick pandoc inotify-tools clamav msmtp
 ```
 
 ---
