@@ -158,7 +158,7 @@ export CHECK_DIR="/media/sf_Compare/input"
 
 ###  Beispielablauf mit Crontab
 
-Das Skript lässt sich regelmäßig ausführen:
+Das Skript lässt sich regelmässig ausführen:
 
 ```bash
 crontab -e
