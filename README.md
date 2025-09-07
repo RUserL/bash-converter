@@ -93,3 +93,88 @@ sudo apt install imagemagick pandoc inotify-tools clamav msmtp
 ## 💡 Hinweis
 
 Für den Mailversand muss `msmtp` richtig eingerichtet sein, z. B. mit einem Gmail-Account oder SMTP-Relay.
+
+##  Erweiterung: Headless & Automatisierte Nutzung
+
+Das Projekt unterstützt einen **Headless-Modus** zur automatisierten Ausführung **ohne Benutzerinteraktion**.
+
+###  Verwendung von Shell-Parametern & Umgebungsvariablen
+
+####  Eingabeverzeichnis mit `-d` oder Umgebungsvariable `CHECK_DIR`
+
+Du kannst das Eingabeverzeichnis auf zwei Arten angeben:
+
+- Per Parameter:
+  ```bash
+  ./convert.sh -d /media/sf_Compare/input
+  ```
+
+- Oder mit Umgebungsvariable:
+  ```bash
+  export CHECK_DIR="/media/sf_Compare/input"
+  ./convert.sh -a
+  ```
+
+#### ⚙ Headless Menü starten
+
+Das Menü kann komplett automatisiert im Hintergrund gestartet werden:
+
+```bash
+./menu.sh --headless [Optionen]
+```
+
+Verfügbare Optionen:
+
+| Option                  | Beschreibung                                               |
+|------------------------|------------------------------------------------------------|
+| `--headless`           | Aktiviert den Headless-Modus (kein Benutzer-Input)         |
+| `--compare file1 file2`| Startet PDF-Vergleich mit zwei Dateien                     |
+| `--convert`            | Startet Konvertierung aller Dateien im Eingabeordner      |
+| `--watch`              | Startet automatische Bildüberwachung                       |
+| `--virus-scan`         | Startet Hintergrund-Virenscan für neue Dateien             |
+
+Beispiel:
+```bash
+./menu.sh --headless --convert
+```
+
+Oder:
+```bash
+./menu.sh --headless --compare A.pdf B.pdf
+```
+
+---
+
+###  Headless-Abläufe kombinieren
+
+Du kannst auch komplette Konvertierung + Vergleich automatisiert aufrufen:
+
+```bash
+export CHECK_DIR="/media/sf_Compare/input"
+./menu.sh --headless --convert --compare file1.pdf file2.pdf
+```
+
+---
+
+###  Beispielablauf mit Crontab
+
+Das Skript lässt sich regelmäßig ausführen:
+
+```bash
+crontab -e
+```
+
+Dann z. B.:
+
+```cron
+0 * * * * /pfad/zum/projekt/menu.sh --headless --watch >> /pfad/zum/logs/watch_cron.log
+```
+
+---
+
+##  Vorteile der Headless-Erweiterung
+
+✅ Keine Benutzerinteraktion notwendig  
+✅ Ideal für automatisierte Workflows und Cronjobs  
+✅ Kombinierbare Module für maximale Flexibilität  
+✅ Unterstützt Shared Folder wie `/media/sf_Compare`
