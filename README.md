@@ -98,7 +98,6 @@ Für den Mailversand muss `msmtp` richtig eingerichtet sein, z. B. mit einem G
 
 Das Projekt unterstützt einen **Headless-Modus** zur automatisierten Ausführung **ohne Benutzerinteraktion**.
 
-###  Verwendung von Shell-Parametern & Umgebungsvariablen
 
 ####  Eingabeverzeichnis mit `-d` oder Umgebungsvariable `CHECK_DIR`
 
